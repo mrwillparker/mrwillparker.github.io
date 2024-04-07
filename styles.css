@@ -1,0 +1,145 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lato:700);
+
+body {
+   font-family: "Open Sans", Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+pre, code {
+   font-family: "Courier New", Courier, monospace;
+   font-weight: 600;
+}
+
+code {
+	X-background-color: #d0d3d4;
+}
+
+h1, h2, h3, h4 {
+   font-family: "Lato", sans-serif;
+   font-weight: 700;
+}
+
+ol li {
+	margin-top: 5px;
+}
+
+*.headfont {
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+
+dl dt {
+	margin: 5px;
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+
+b {
+	font-family: "Lato", sans-serif;
+	/* font-size: 20px; */
+	font-weight: 900;
+}
+
+#footer {
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+*.lastmod {
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+
+
+table.gbar {
+   border-collapse: collapse;
+}
+
+.gbar * td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	vertical-align: top;
+	text-align: left;
+
+	/*
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-size: 16px;
+	*/
+}
+
+.gbar * tr:nth-child(even) {
+	background-color: #d0d3d4;
+}
+
+.gbar * th{
+	border: 1px solid #ddd;
+	padding: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #909497;
+	color: white;
+	vertical-align: top;
+}
+
+.vacation *{
+	background-color: #d0ffff;
+}
+
+.thisweek *{
+	background-color: #ffd0d0;
+}
+
+*.ulheading {
+	border-bottom: solid #000000 1px;
+	margin-top:30px;
+	margin-right:10px;
+}
+
+*.gulheading *.yulheading {
+	border-bottom: solid #000000 1px;
+	margin-top:30px;
+	margin-right:10px;
+}
+
+*.gulheading {
+	background-color: #d0ffd0;
+}
+
+*.yulheading {
+	background-color: #ffff80;
+}
+
+
+.demo {
+    border: 1px solid black;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #d0d3d4;
+}
+
+
+a:link {
+	background-color: #e8ffff;
+}
+
+a:hover {
+	background-color: lightgreen;
+}
+
+
+span.notice {
+	color: red; 
+	font-style: italic; 
+	font-weight: bolder;
+}
