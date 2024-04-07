@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+<style>
+
+.navigation {
+            font-family: Arial, sans-serif;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .navigation li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navigation li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .navigation li a:hover {
+            color: #555;
+        }
+
+</style>
+
+</head>
+
+
+<body>
+    <u1 class="navigation">
+        <li>
+            <a href="index.html">
+            Home
+            </a>
+        </li> 
+
+        <li>
+            <a href="syllabus.html">
+            Syllabus 
+            </a>
+        </li>
+
+        <li>
+            <a href="assignments.html">
+                Assignments
+            </a>
+        </li>
+    </u1>
+    
+    <p>
+
+ 
+    </p>
+</body>
+</html>
