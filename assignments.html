@@ -6,7 +6,7 @@
     
 <style>
 
-.navigation {
+        .navigation {
             font-family: Arial, sans-serif;
             list-style-type: none;
             margin: 0;
@@ -28,6 +28,32 @@
 
         .navigation li a:hover {
             color: #555;
+        }
+
+        table {
+
+            font-family: Arial, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue; 
+        }
+
+        a:hover {
+            text-decoration:  underline;
         }
 
 </style>
@@ -55,10 +81,25 @@
             </a>
         </li>
     </u1>
-    
-    <p>
 
- 
+    <p>
+    <table>
+        <tr>
+            <th> Assignment</th>
+            <th> Due Date</th>
+            <th> Notes/Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <a href="assignment1.pdf" target=".blank">Assignment 1</a></td>
+            <td> April </td>
+            <td> comments</td>
+        </tr>
+
+    </tbody>
+    </table>
     </p>
+   
 </body>
 </html>
