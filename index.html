@@ -1,933 +1,102 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" -- >
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- #BeginTemplate "\templates\faculty_Standard.dwt" -->
+<!DOCTYPE html>
+
+<html>
+
 <head>
-<style type="text/css">
-.thisweek_1 *{ background-color: #ffd0d0; }
-</style>
+    <title>ECE 370 - PARKER</title>
 
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <style>
+        .centered-text {
+            text-align: center;
+        }
 
-<title>CSCI 340, Section 3, Fall 2022 - NIU - Computer Science</title>
+        .vskip {
+            margin-bottom: 20px;
+        }
 
-<link rel="shortcut icon" href="/~winans/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="styles.css">
+        p {
+            font-size: 17px;
+            font-family: Arial, sans-serif;
+        }
 
-<meta name="keywords" content="" />
-<meta name="description" content="" />
+        .navigation {
+            font-family: Arial, sans-serif;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+        .navigation li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-<!-- Start Google tracking code -->
-<!-- 
-<meta name="description" content="" />
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        .navigation li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
 
-  ga('create', 'UA-43769307-1', 'niu.edu');
-  ga('send', 'pageview');
+        .navigation li a:hover {
+            color: #555;
+        }
 
-</script>
--->
-<!-- End Google tracking code -->
-<!-- #EndEditable -->
-
+    </style>
 </head>
+
 <body>
 
+    <u1 class="navigation">
+        <li>
+            <a href="index.html">
+            Home
+            </a>
+        </li> 
+
+        <li>
+            <a href="syllabus.html">
+            Syllabus 
+            </a>
+        </li>
+
+        <li>
+            <a href="assignments.html">
+                Assignments
+            </a>
+        </li>
+    </u1>
+
+    <div class="centered-text"> 
+        <p>
+        <strong>
+        Parker University <br>
+        </strong>
+        Department of Electrical and Computer Engineering
 
-
-
-<div id="breadcrumbs">
-<a href="http://www.cs.niu.edu/">Computer Science</a> 
-&gt; <a href="/~winans/"> John Winans</a> 
-&gt; CSCI 340
-</div> 
-
-
-<h1 style="text-align: center">ECE 370 Electromagnetic Fields and Waves</h1>
-
-<p> 
-<b> Course Description </b> <br>
-
-Theory of electromagnetic fields and waves. Electrostatic, mangetostatic, and electromagnetic fields. Solutions to 
-Maxwell's equations for electromagnetic wave propagation. Analysis and design of transmission-line systems.
-</p>
-
-<p><a href="syllabus/">Course Syllabus</a></p>
-
-<!-- ************************************************************************************************** -->
-<h2 class='gulheading'>Contact Information and Office Hours</h2>
-
-<dl class='bdl'>
-	<dt>Instructor</dt>
-	<dd> 
-		John Winans (<a href='https://www.linkedin.com/in/john-winans-8627115/'>You can contact me via Linked In</a>)<br/>
-		<dl class='bdl'>
-		Office Hours:
-			<dd> Tuesdays &amp; Thursdays 8:45am - 10:45am &amp; 12:30pm - 1:30pm</dd>
-			<dd> and by appointment</dd>
-		</dl>
-	</dd>
-	<dt>Teacher's Assistant</dt>
-	<dd> 
-		Ganesh Kanadam <a href="mailto:%22Ganesh%20Kanadam%22%3cZ1939317@students.niu.edu%3e">Z1939317@students.niu.edu</a><br/>
-		<dl class='bdl'>
-		Office Hours:
-			<dd>Monday noon - 1:00pm</dd>
-			<dd>Tuesday 3:15pm - 5:15pm</dd>
-			<dd> Wednesday noon - 3:00pm</dd>
-			<dd> and by appointment</dd>
-		</dl>
-
-		Madhumitha Ponnala <a href="mailto:%22Madhumitha%20Ponnala%22%3cZ1940936@students.niu.edu%3e">Z1940936@students.niu.edu</a><br/>
-		<dl class='bdl'>
-		Office Hours:
-			TBA
-			<dd> Mondays 12:00 - 4:00pm &amp; Thursdays 3:15pm - 5:15pm</dd>
-			<dd> and by appointment</dd>
-		</dl>
-	</dd>
-</dl>
-
-<p>
-<span class='notice'>Until future notice, all office hours will be held on Microsoft Teams unless otherwise scheduled by appointment.</span>
-</p>
-
-<!-- ************************************************************************************************** -->
-<h2 class='gulheading'>Tentative Schedule</h2>
-
-<table class='gbar'>
-<tr>
-   <th>Week</th>
-   <th>Topics</th>
-   <th>Evaluation</th>
-   <th>Readings</th>
-   <th>Assignment</th>
-<tr>
-
-
-<tr class=''>
- <td>1 - 08/21</td>
-	<td>
-		Programming tools:<br/>
-		git &amp; <a href='https://github.com/'>github</a><br/>
-		<a href='https://www.doxygen.nl/'>Doxygen</a><br/>
-		<a href='https://youtu.be/jWXFIsnNI4M'>assert(3)</a><br/>
-		<a href='https://youtu.be/TT4P0JYvv4U'>valgrind(1)</a>
-	</td>
-	<td>Quiz 01</td>
-	<td>1.1, 1.2, Chapter 2</td>
-	<td>
-	</td>
-</tr>
-<tr class=''>
- <td>2 - 08/28</td>
-	<td>
-		Complexity Analysis<br/>
-		Overview of STL Containers<br/>
-		<a href='https://en.cppreference.com/w/cpp/string/basic_string'>STL Strings</a><br/>
-		<a href='https://en.cppreference.com/w/cpp/container/vector'>STL Vectors</a><br/>
-	</td>
-	<td>Quiz02</td>
-	<td>
-		Chapter 2, 
-		<a href='https://www.geeksforgeeks.org/the-c-standard-template-library-stl'>Reading on STL</a>
-	</td>
-	<td>
-		01
-	</td>
-</tr>
-<tr class=''>
- <td>3 - 09/04</td>
-    <td>
-		Linked Lists<br/>
-		<a href='https://en.cppreference.com/w/cpp/container/list'>STL List</a><br/>
-	</td>
-    <td>Quiz03</td>
-    <td>
-		3.1, 3.2, 4.1, 4.2, 6.1-6.3
-	</td>
-	<td>
-		02
-	</td>
-</tr>
-<tr class=''>
- <td>4 - 09/11</td>
-    <td>
-		<a href='https://en.cppreference.com/w/cpp/container/deque'>STL Deque</a><br/>
-		<a href='https://en.cppreference.com/w/cpp/container/queue'>STL Queue</a><br/>
-		<a href='https://en.cppreference.com/w/cpp/container/stack'>STL Stack</a><br/>
-	</td>
-    <td>Quiz04</td>
-    <td>
-		5.1-5.4, 11.1, 11.2
-	</td>
-	<td>
-		03
-	</td>
-</tr>
-<tr class=''>
- <td>5 - 09/18</td>
-	<td>
-		<a href='https://en.cppreference.com/w/cpp/container/set'>STL Sets</a><br/>
-		<a href='https://en.cppreference.com/w/cpp/container/map'>STL Maps</a><br/>
-	</td>
-    <td>Quiz05</td>
-    <td>2.6, Chapter 7</td>
-	<td>
-		04
-	</td>
-</tr>
-<tr class=''>
- <td>6 - 09/25</td>
-    <td>
-		Recursion
-	</td>
-    <td style='color: red'><b>Exam 1</td>
-    <td></td>
-    <td>
-	</td>
-</tr>
-<tr class=''>
- <td>7 - 10/02</td>
-    <td>
-		STL Iterators<br/>
-		Sorting<br/>
-		<a href='https://en.cppreference.com/w/cpp/algorithm/sort'>std::sort()</a>
-	</td>
-    <td>Quiz06</td>
-    <td>Chapter 12</td>
-	<td>
-		05
-	</td>
-</tr>
-<tr class=''>
- <td>8 - 10/09</td>
-    <td>
-		Lambda Expressions<br/>
-		Binary Trees<br/>
-		Binary Search Trees<bnr/>
-	</td>
-    <td>Quiz07</td>
-    <td>Chapter 8</td>
-    <td>
-		06
-	</td>
-<!-- ?php tr_end(); tr_begin('vacation'); ?>
-	<td colspan='4'><span style='width=100%'><center>------- Spring Break -------</center></td>
--->
-</tr>
-<tr class=''>
- <td>9 - 10/16</td>
-    <td>
-		AVL Trees<br/>
-		Red-Black Trees<br/>
-	</td>
-    <td>Quiz08</td>
-    <td>10.1, 10.2</td>
-	<td>
-		07
-	</td>
-</tr>
-<tr class=''>
- <td>10 - 10/23</td>
-    <td>
-		TBA
-	</td>
-    <td><b style='color: red'>Exam 2</b></td>
-    <td></td>
-	<td></td>
-</tr>
-<tr class=''>
- <td>11 - 10/30</td>
-    <td>
-		Heaps<br/>
-		Hashing
-	</td>
-    <td>Quiz09</td>
-    <td>Chapter 9</td>
-	<td>
-		08
-	</td>
-</tr>
-<tr class=''>
- <td>12 - 11/06</td>
-    <td>
-		<span style='color: red'>(Election)</span><br/>
-		B-Trees 
-	</td>
-    <td>Quiz10</td>
-    <td>11.3, 10.3</td>
-	<td>
-		09 
-	</td>
-</tr>
-<tr class=''>
- <td>13 - 11/13</td>
-    <td>
-		B-Trees<br/>
-		Graphs
-	</td>
-    <td>Quiz11</td>
-    <td>Chapter 13</td>
-	<td>
-		10
-	</td>
-</tr>
-<tr class=''>
- <td>14 - 11/20</td>
-    <td>
-		Graphs
-		<br/><span style='color: red'>(Thanksgiving)</span>
-	</td>
-    <td>Quiz12</td>
-    <td>Chapter 13</td>
-	<td>
-	</td>
-</tr>
-<tr class=''>
- <td>15 - 11/27</td>
-    <td>
-		Graphs
-	</td>
-    <td>Quiz13</td>
-    <td>Chapter 13</td>
-	<td>
-		11
-	</td>
-</tr>
-<tr class=''>
- <td>16 - 12/04</td>
-    <td>Finals Week</td>
-    <td style='color: red' colspan='3'>
-		<b>Final Exam, In class on: Tuesday, December 6, 2-3:50 p.m.</b>
-	</td>
-</tr>
-
-</table>
-
-
-<!-- ************************************************************************************************** -->
-<h2 class='gulheading'>Assignments</h2>
-
-
-<p>
-Each assignment will be made available by way of an invitation to a github repo 
-that will be posted as an announcement in BlackBoard.
-</p>
-<p>
-All assignments are due at, or before, 23:59:59 in US/Central time on the specific due date given
-in the invitations.
-The timestamp of the assignment submission shall be used to determine when you <em>handed it in</em>.
-</p>
-
-<p>Due Dates:</p>
-<ul>
-<li> 01 - (10 pts) Github, Due 9/02</li>
-<li> 02 - (10 pts) Matrix Multiply, Due: 9/09 </li>
-<li> 03 - (10 pts) Two Search Algorithms, Due: 9/16 </li>
-<li> 04 - (10 pts) Stacks, Due: 9/24 (<span style='color: red'>Due date updated</span>)</li>
-<li> 05 - (10 pts) Josephus Problem, Due: 10/07 </li>
-<li> 06 - (10 pts) Parking Garage, Due: 10/14 </li>
-<li> 07 - (10 pts) Word Scanner, Due: 10/21 </li>
-<li> 08 - (10 pts) Binary Tree, Due: 11/04 </li>
-<li> 09 - (10 pts) Binary Search Tree, Due: 11/11 </li>
-<li> 10 - (10 pts) Hashing, Due: 11/18</li>
-<li> 11 - (10 pts) Graphs, Due: 12/02 (<span style='color: red;'><b>THIS DUE DATE IS FIRM, NO EXTENSIONS ARE ALLOWED</b></span>)</li>
-</ul>
-
-<span style='color: red;'><b>NOTICE: No late work will be accepted after December 2.  Plan accordingly!</b></span>
-
-
-
-<!-- ************************************************************************************************** -->
-<h2 class='gulheading'>Announcements</h2>
-
-
-<ol>
-<li> Students should check this web site frequently.</li>
-
-<li> It is likely that I will not be able to process email in a timely manner that lack the following items:
-	<ul>
-	<li> A clear and meaninful subject line.</li>
-	<li> An indication of the course and section number within which you are enrolled.</li>
-	<li> Things that my email reader classifies as spam.</li>
-	</ul>
-</li>
-
-<li> In order to help you properly debug a program, we will need the following:
-	<ul>
-	<li> 
-		Your code, not just a screenshot of the error message you're getting. 
-		That means <strong>ALL OF YOUR CODE</strong>, not just the short section where you think the problem might be located. 
-		We will often need to compile, link, and run your program to find all of your errors, particularly runtime errors.
-	</li>
-	<li> A complete discussion of what you BELIEVE the problem to be as well as why.</li>
-	</ul>
-</li>
-
-<li>There are notes on C++ programming on my <a href='/~winans/CS501/'>CSCI 501 page</a>.</li>
-</ol>
-
-
-
-
-<!-- ************************************************************************************************** -->
-
-<h2 class='gulheading'>Course Information</h2>
-
-<ul>
-    <li><a href="/~winans/howto/doxygen/">Documentation Standards.</a></li>
-    <li><a href="/~winans/howto/hopperssh/">How to install and use PuTTY and FileZilla to access the departmental Linux servers.</a></li>
-    <li><a href="/~winans/howto/unix/">How to use Linux/Unix to manage your homework assignment projects.</a></li>
-    <li> <b><em>Never use <a href='/~winans/howto/evilfilenames/'>evil filenames</a>.</em></b>
-    <li><a href="https://www.niu.edu/blackboard/students/index.shtml">Help for Students Using Blackboard.</a></li>
-</ul>
-
-
-
-
-<a name="WSL"><h2 class='yulheading'>Using Linux, MacOS, WSL,...</h2></a>
-
-<p><b>DANGER WILL ROBINSON!</b> Developing and testing your assignments on your own PC is encouraged.
-<b>However</b>, your grade is based solely on our ability to build and run your program on <code>hopper.cs.niu.edu
-</code> as described in the assignment handouts!
-Therefore, it does not matter if it runs OK on your own system.
-A program that fails to build or run on <code>hopper.cs.niu.edu</code> will be graded as such.</p>
-
-<p>You <em>must</em> test your program on <code>hopper.cs.niu.edu</code> before handing it in.</p>
-
-<p>[On Windows, you can <a href='https://ubuntu.com/wsl'>install WSL &amp; Ubuntu</a> and then use one of its terminal windows to do development and testing of Linux code on a Windows PC.]</p>
-
-<p>But... you <em>must</em> still test your program on <code>hopper.cs.niu.edu</code> before handing it in.</p>
-
-
-<h2 class='yulheading'>C++ Stuff You Should Know (Review)</h2>
-
-Here are some more topics you might find useful.
-There are placed here for you to refer back to if/when it becomes necessary to review.
-<ul>
-    <li>How things are stored in memory:</li>
-    <ul>
-        <li><a href='https://youtu.be/t1hXkWn0Alo'>How to use <code>stdint.h</code></a> (The first half is most relevant here.  The second half is useful for debugging numeric overflow problems.)</li>
-        <li>The <a href='https://youtu.be/a92Orfbm88k'>sizeof() operator</a></li>
-        <li><a href='https://youtu.be/bBndOMTW-kE'>How arrays are stored in memory</a></li>
-    </ul>
-    <li>Where things are stored in memory:</li>
-    <ul>
-        <li><a href='https://youtu.be/ml7Kj9Mkae8'>An Intro to Stacks &amp; Stack Operations</a></li>
-        <li><a href='https://youtu.be/-NUZD60eu7Y'>How a process manages its memory/address space</a></li>
-        <li><a href='https://youtu.be/7dMTCdFM2ss'>Stack frames (aka activation records) and gdb</li>
-
-        <li><a href='https://youtu.be/K6GA_sPeU2k'>Pointers</a> (part 1)</li>
-        <li><a href='https://youtu.be/KU3DnughqTQ'>Pointers</a> (part 2)</li>
-        <li><a href='https://youtu.be/ZcEy_BRXJR8'>Pointers</a> (part 3)</li>
-    </ul>
-    <li><a href='https://youtu.be/yiDcfFtaSgw'>Characters & ctype.h</a></li>
-    <li><a href='https://youtu.be/vsHTRvnxoXg'>C Strings</a></li>
-    <li><a href='https://youtu.be/hvh0ZUW1oCQ'>References</a></li>
-    <li><a href='https://youtu.be/xO0PqXe5TQs'>Classes</a></li>
-</ul>
-<h2 class='yulheading'>Reading, Printing, and Formatting Numbers in C++ (Review)</h2>
-<p><b>Bonus!!</b> Some reviews for those that forgot how to do this!</p>
-<h3>Lectures:</h3>
-<ul>
-<li><a href='https://youtu.be/fNSZTN4IKGY'>Reading Data From <code>std::cin</code></a> (Review)</li>
-<li><a href='https://youtu.be/oxI3do9KBh0'>Writing and Formatting Data to <code>std::cout</code></a> (Review)</li>
-<li><a href='https://youtu.be/JsIJBh2OKhM'>A C++ Build Process Overview</a> (Review)</li>
-</ul>
-
-<h2 class='yulheading'>Some Useful C++ Standard Library References</h2>
-
-<ul>
-    <li><a href="http://www.cplusplus.com/reference/">References for the C standard library, the C++ IO stream libraries, and the C++ <code>string</code> class</a></li>
-  <li><a href="http://www.cppreference.com/">References for the standard library container classes, C++ strings, C++ I/O, and many standard C library functions</a></li>
-  <li><a href="http://www.fredosaurus.com/notes-cpp/">C++ and STL notes with some nice code examples</a></li>
-</ul>
-
-<a name='getopt'><h2 class='yulheading'>Command-Line Arguments &amp; <code>getopt(3)</code> (bonus lecture!)</h2></a>
-<code>getopt(3)</code> is a standard library helper function for parsing
-command-line options.
-<h3>Lectures:</h3>
-<ul>
-    <li> A free-association on using the <a href='https://youtu.be/3KKvX-ZvhqI'>getopt(3)</a> man-page example source code</li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-<li> <a href='https://man7.org/linux/man-pages/man3/getopt.3.html'>getopt(3)</a> (The section 3 manual page for getopt)</li>
-<li> <a href='https://www.gnu.org/software/libc/manual/html_node/Getopt.html'>The GNU library doc for getopt(3)</a></li>
-<li> <a href='https://en.wikipedia.org/wiki/Getopt'>Getopt Wikipedia</a></li>
-<li> <a href='https://www.geeksforgeeks.org/getopt-function-in-c-to-parse-command-line-arguments/'>Getopt GeeksForGeeks</a></li>
-<li> <a href='https://en.wikipedia.org/wiki/Usage_message'>Usage</a> statements and what they mean</li>
-</ul>
-<h2 class='yulheading'>Common Compiler Issues (bonus lecture!)</h2>
-<h3>Lectures:</h3>
-<ul>
-    <li> How to fix <a href='https://youtu.be/6vyJJ9myuAY'>Signedness Errors/Warnings</a></li>
-    <li> How to fix <a href='https://youtu.be/gAvI7OvGSjM'>error: unused parameter 'x'</a></li>
-</ul>
-<h2 class='yulheading'>Design For Debugging (bonus lecture!)</h2>
-<h3>Lectures:</h3>
-<ul>
-    <li> 
-		<p>
-			<a href='https://youtu.be/jWXFIsnNI4M'>How to use assert(3)</a> to protect your code from itself!<br/>
-			The idea behind using assertions (and/or exceptions in C++) is to check arguments 
-			and variables in your code to make sure that they are not corrupted by errant code 
-			elsewhere in your application. 
-		</p>
-		<p>
-			Note that assert is for checking against program logic
-			problems.  NOT for checking user errors!  Some times the difference can get blury.  When
-			in doubt, report a regular user error message and terminate your application gracefully.
-			assert() will terminate your application ungracefully.
-		</p>
-	</li>
-    <li> 
-		<p>
-			<a href='https://youtu.be/TT4P0JYvv4U'>How to use valgrind(1)</a> to check for corrupted memory<br/>
-			Valgrind is <em>incredibly</em> useful for verifying that a program has not corrupted 
-			its memory while it runs.  This includes things like writing past the end of an array 
-			and forgetting to <code>delete</code> objects (that were previously created by calling 
-			<code>new</code>) when they are done being used.
-		</p>
-		<p>
-			ALWAYS valgrind your homework as part of normal debugging and testing before handing it in.
-		</p>
-	</li>
-</ul>
-
-
-<!-- ****************************************************************************************** -->
-
-
-<a name='introduction'><h2 class='gulheading'><a href='#introduction'><img height='16' src='../../link-16-icon.png'/></a> Introduction</h2></a>
-<p>Lectures:</p>
-<ul>
-<li><a href='https://youtu.be/HXeLdyB6zME'>Introduction to CSCI 340, Section 1</a></li>
-<li><a href='https://youtu.be/dhwmcQ1wE_I'>Bored? Speed Up Video Playback Speed!</a>, use closed captioning, change the video quality, etc.</li>
-</ul>
-
-
-
-<a name='how_to_use_git'><h2 class='gulheading'>How to use git</h2></a>
-
-<p>Lectures:</p>
-<ul>
-<li><a href='https://youtu.be/EJDd9z3nh3w'>Git Concepts</a> (focused on the needs of CSCI 340)</li>
-<li> <a href='https://youtu.be/CdZa8MzLtjQ'>How to set up SSH for GitHub</a> on Turing/Hopper</li>
-<li>
-	A Discussion of the <a href='https://youtu.be/47kq2oDR4Kw'>Git Homework Workflow</a> for CSCI 340<br/> 
-	<span class='notice'>
-		(NOTE: You must now use SSH for the cloning shown at 7:07 into 
-		this video. -- Due to changes at github, HTTPS may no longer 
-		work as shown in this lecture.)
-	</span>
-</li>
-</ul>
-
-<p>Handouts:</p>
-<ul>
-<li><a href='https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent'>Generating an SSH key</a> article as seen in lecture.</li>
-<li><a href='/~winans/howto/git/directions.pdf'>CSCI 340 Homework Workflow</a> (as seen in lecture)</li>
-<li><a href='/~winans/howto/git/git-cheat-sheet-education.pdf'>Git Cheat Sheet</a> (Git is a version control system)</li>
-<li><a href='/~winans/howto/git/github-git-cheat-sheet.pdf'>Github Cheat Sheet</a> (Git<em>hub</em> is a web site with tools for using git)</li>
-</ul>
-
-<p>Web Links:</p>
-<ul>
-<li><a href='https://git-scm.com/docs/gittutorial'>A tutorial introduction to Git</a></li>
-<li><a href='https://guides.github.com/introduction/git-handbook/'>Git Handbook</a></li>
-</ul>
-
-
-
-<h2 class='gulheading'><a name='doxygen'>How to use Doxygen</a></h2>
-<h3>Lectures:</h3>
-<ul>
-<li>Documenting a C++ application with <a href='https://youtu.be/5G1zUpNFmEY'>Doxygen</a></li>
-<ul>
-<li>Note that this lecture shows what Doxygen does with your code and comments so that you understand what is going on.</li>
-<li>For this course our concerns will be limited to that of creating the proper doc boxes so that Doxygen CAN be used... as shown the handouts below.</a></li>
-<li>Of course, you are encouraged to give running Doxygen a try.  It should be installable on any Unix(ish) OS from standard packages. (On Windows, you can install <a href='#WSL'>WSL</a> and then use it in one of its terminal windows.)</li>
-</li>
-</ul>
-</ul>
-
-<h3>Handouts:</h3>
-<ul>
-<li><a href='/~winans/howto/doxygen/#examples'>An example of a properly documented function</a></li>
-<li>The <a href='/~winans/howto/doxygen/Doxyfile.hacked'>Doxyfile.hacked</a> file as seen in the above tutorial</li>
-</ul>
-
-<h3>Web Links:</h3>
-<ul>
-<li>The <a href='https://www.doxygen.nl/manual/docblocks.html'>Doxygen</a> web site</li>
-</ul>
-
-
-
-
-
-
-
-
-
-<h2 class='gulheading'><a name='big_o'>Complexity Analysis (Big-O Notation)</a></h2>
-<h3>Lectures:</h3>
-<ul>
-<li> Complexity/<a href='https://youtu.be/3LXXG_PWuSI'>Algorithm Analysis</a></li>
-</ul>
-
-<h3>Handouts:</h3>
-<ul>
-<li> Complexity/<a href='340_00_algorithm.pdf'>Algorithm Analysis</a> (as seen in lecture)</li>
-</ul>
-
-
-
-
-
-<h2 class='gulheading'>STL</h2>
-<h3>Lectures:</h3>
-<ul>
-	<li>The <a href='https://youtu.be/Fs2fnUAMJlk'>std::string</a> class</li>
-	<li> <a href='https://youtu.be/hO2uI-_ZdNs'>Overview of STL Containers</a></li>
-	<li> <a href='https://youtu.be/Mcjr8PH0bIw'>std::vector</a> template class</li>
-	<li> <a href='https://youtu.be/jn8_Xq3z48w'>How to create a 2D vector</a></li>
-</ul>
-
-<h3>Web Links:</h3>
-<ul>
-<li>An introcuction to the <a href='https://www.geeksforgeeks.org/the-c-standard-template-library-stl/'>C++ Standard Template Library (STL)</a></li>
-<li> A reference on <a href='http://www.cplusplus.com/reference/stl/'>containers</a> (cplusplus.com)</li>
-<li> A reference on <a href='https://en.cppreference.com/w/cpp/container'>containers</a> (cppreference.com)</li>
-<li> <a href='https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14'>C++ STL Algorithms Cheat Sheet</a> (the table of contents links are broken but you can scroll down and see the parts)<br/>This is a list of the STL library functions like <code>std::sort</code> that you can use with various containers</li>
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 class='gulheading'><code>rand(3)</code> Function</h2>
-<h3>Lectures:</h3>
-<ul>
-	<li> <a href='https://youtu.be/0zuZrYDQ9pM'>Generating Random Numbers</a></li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-<li> <a href='https://en.wikipedia.org/wiki/Random_number_generation'>The RNG Page From Wikipedia</a> (as seen in lecture)</li>
-</ul>
-
-
-
-
-
-
-
-
-
-<h2 class='gulheading'>STL <code>std::list</code></h2>
-<h3>Lectures:</h3>
-<ul>
-	<li> <a href='https://youtu.be/0ZU3cS4zqug'>Singly Linked Lists</a> (an implementation review)</li>
-	<li> <a href='https://youtu.be/P_F-oEeBT8k'>Doubly Linked Lists</a> (an implementation review)</li>
-	<li> <a href='https://youtu.be/_VIUMw5x7SA'>std::list</a> template class</li>
-	<li>Creating a <a href='https://youtu.be/w4qLS7f_PJ4'>Circular Linked List</a> using a std::list</li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-	<li> A reference on <a href='https://www.cplusplus.com/reference/list/list/'>std::list</a> (cplusplus.com)</li>
-	<li> A reference on <a href='https://en.cppreference.com/w/cpp/container/list'>std::list</a> (cppreference.com) as seen in lecture</li>
-</ul>
-
-
-
-
-
-
-
-<h2 class='gulheading'>More STL Containers and Adapters</h2>
-<h3>Lectures:</h3>
-<ul>
-<li><a href='https://youtu.be/HKVHYOL07b4'>std::deque</a> template class</li>
-<li><a href='https://youtu.be/u53P6ASyfEs'>std::queue</a> container adaptor</li>
-<li><a href='https://youtu.be/ml7Kj9Mkae8'>An Intro to Stacks &amp; Stack Operations</a> </li>
-<li><a href='https://youtu.be/W7oEFE4V0SM'>Creating a Stack Using a Linked List</a> </li>
-<li><a href='https://youtu.be/gQxDddXsjbc'>std::stack</a> container adaptor</li>
-</ul>
-
-<h3>Handouts:</h3>
-<ul>
-	<li> Notes on creating your own <a href='/~winans/CS501/#linked_stack'>linked stacks</a> (as seen in lecture) </li>
-	<li> Notes on creating your own <a href='/~winans/CS501/#linked_queue'>linked queues</a> </li>
-</ul>
-
-<h3>Web Links:</h3>
-<ul>
-	<li> <a href='https://en.cppreference.com/w/cpp/container/stack'>std::stack</a> (cppreference.com) </li>
-	<li> <a href='https://en.cppreference.com/w/cpp/container/queue'>std::queue</a> (cppreference.com) </li>
-	<li> <a href='https://en.cppreference.com/w/cpp/container/deque'>std::deque</a> (cppreference.com) </li>
-</ul>
-
-
-
-
-<h2 class='gulheading'>STL Associative Containers</h2>
-<h3>Lectures:</h3>
-<ul>
-<li><a href='https://youtu.be/Kg6_MUub2YY'>std::set</a> template class</li>
-<li><a href='https://youtu.be/KqxquJlQNds'>std::map</a> template class</li>
-</ul>
-
-<h3>Web Links:</h3>
-<ul>
-	<li> <a href='https://en.cppreference.com/w/cpp/container/set'>std::set</a> (cppreference.com) </li>
-	<li> <a href='https://en.cppreference.com/w/cpp/container/map'>std::map</a> (cppreference.com) </li>
-</ul>
-
-
-
-<h2 class='gulheading'>Recursion</h2>
-<h3>Lectures:</h3>
-<ul>
-<li><a href='https://youtu.be/wVB7d0QqTSk'>Recursion</a></li>
-</ul>
-
-<h3>Web Links:</h3>
-<ul>
-	<li> <a href='https://www.khanacademy.org/computing/computer-science/algorithms/recursive-algorithms/a/recursion'>Recursion</a> (khanacademy.org article) </li>
-	<li> <a href='https://www.geeksforgeeks.org/recursion/'>Recursion</a> (geeksforgeeks.org article) </li>
-	<li> <a href='https://en.wikipedia.org/wiki/Recursion_(computer_science)'>Recursion</a> (Wikipedia article) </li>
-</ul>
-
-
-
-
-
-
-<h2 class='gulheading'>STL Iterators</h2>
-Not all Iterators are created equal...
-
-<h3>Lectures:</h3>
-<ul>
-	<li> <a href='https://youtu.be/REuCwTvMfhU'>Iterator Subtleties That Can Cause Problems</a></li>
-	<li> <a href='https://youtu.be/Yw1rpgd7kMo'>Iterators & Iterator Adapters</a></li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-	<li> The <a href='https://en.cppreference.com/w/cpp/iterator'>Iterator Library</a> (cppreference.com) </li>
-</ul>
-
-
-
-
-
-
-
-
-<a name='stl-algorithms'><h2 class='gulheading'>STL Algorithms</a></h2>
-The STL provides a number of templates that can be applied to the containers
-in various ways.
-
-<h3>Lectures:</h3>
-<ul>
-	<li> <a href='https://youtu.be/NYtgVdCpMxY'>std::generate()</a><br/>
-	 	Used to replace the values of a range of elements in a container.</li>
-	<li> <a href='https://youtu.be/V3CWqssNNCM'>std::find()</a> and Predicates</li>
-	<li> <a href='https://youtu.be/0joVh_H_hn4'>std::copy()</a></li>
-	<li> <a href='https://youtu.be/lz2w1t5twtU'>std::sort()</a> and Comparators<br/>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-	<li> The <a href='https://en.cppreference.com/w/cpp/algorithm'>Algorithms library</a> (cppreference.com) </li>
-</ul>
-
-
-
-
-
-
-
-
-
-<h2 class='gulheading'>Sorting</code></h2>
-<h3>Lectures:</h3>
-<ul>
-	<li> <a href='https://youtu.be/tkaAQ6EtcI8'>Selection Sort</a></li>
-	<li> <a href='https://youtu.be/MU09wIEApE0'>Merge Sort</a></li>
-	<li> (see also std::sort() in the <a href='#stl-algorithms'>STL Algorithms</a> section)</li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-	<li> A discussion of <a href='https://lamfo-unb.github.io/2019/04/21/Sorting-algorithms/'>Sorting Algorithms</a> with animated illustrations of their inner-workings.</li>
-</ul>
-
-
-
-
-
-<h2 class='gulheading'>Lambda Expressions</code></h2>
-<h3>Lectures:</h3>
-<ul>
-    <li> <a href='https://youtu.be/gr93LyOylyg'>Lambda Expressions</a></li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-    <li> <a href='https://en.cppreference.com/w/cpp/language/lambda'>Lambda expressions</a> (cppreference.com) </li>
-</ul>
-
-
-
-
-
-
-
-
-<h2 class='gulheading'>Binary Trees</code></h2>
-<h3>Lectures:</h3>
-<ul>
-    <li><a href="https://youtu.be/PaSiWRgVGDI">Introduction to binary trees</a></li>
-    <li><a href="https://youtu.be/edPtY0n12Jw">Binary tree traversals</a></li>
-    <li><a href="https://youtu.be/_i52R1BKLeU">Recursive level order traversal</a></li>
-    <li><a href="https://youtu.be/AGxc3w3Gs-A">Binary Search Trees</a> (BST)</li>
-    <li><a href="https://youtu.be/RjptumPqlUs">AVL Trees</a>
-		<ul>
-		<li> There is an error on slide 19 that is discussed in the recorded lecture.</li>
-		<li> There is <em>also</em> an error on slide 15 of a similar nature.</li>
-		<li> 
-			To see the correct evolution of the AVL trees in these (and other examples), you can
-			use the animated tree application at this web site:
-			<a href='https://www.cs.usfca.edu/~galles/visualization/AVLtree.html'>AVL Tree Visualizer</a>
-		</li>
-		</ul>
-	</li>
-	
-
-</ul>
-<h3>Handouts:</h3>
-<ul>
-	<li><a href="/~winans/notes/Data_Structures/binary_trees.html">Binary Trees Overview</a></li>
-	<li><a href="/~winans/notes/Data_Structures/binary_tree_traversals.html">Binary Tree Traversals</a></li>
-	<li><a href="/~winans/notes/Data_Structures/binary_search_trees.html">Binary Search Trees</a></li>
-	<li><a href="/~winans/notes/tree.pdf">The BST slides seen in the lecture video</a> (Courtesy of John Lehuta)</li>
-	<li><a href="/~winans/notes/bst/">Source code from the BST lecture slides</a> </li>
-	<li><a href="/~winans/notes/avltree.pdf">The AVL slides seen in the lecture video</a> (Courtesy of John Lehuta)</li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-	<li>A pretty cool <a href="https://www.cs.usfca.edu/~galles/visualization/BST.html">Binary Search Tree Visualization</a> generator application.</li>
-	<li>A pretty cool <a href='https://www.cs.usfca.edu/~galles/visualization/AVLtree.html'>AVL Tree Visualizer</a> generator application.</li>
-	<li><a href='https://en.wikipedia.org/wiki/Binary_tree'>Binary tree</a> (wikipedia)</li>
-	<li><a href='https://en.wikipedia.org/wiki/Binary_search_tree'>Binary search tree</a> (wikipedia)</li>
-	<li><a href='https://en.wikipedia.org/wiki/AVL_tree'>AVL tree</a> (wikipedia)</li>
-	<li><a href='https://en.wikipedia.org/wiki/Red%E2%80%93black_tree'>Red-black tree</a> (wikipedia)</li>
-
-</ul>
-
-
-
-
-
-
-<h2 class='gulheading'>Heaps</code></h2>
-<h3>Lectures:</h3>
-<ul>
-    <li><a href="https://youtu.be/a0Fxq80lHEg">Heaps</a></li>
-</ul>
-<h3>Handouts:</h3>
-<ul>
-	<li>See BlackBoard for copies of handouts seen in lecture</li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-	<li><a href='https://en.wikipedia.org/wiki/Heap_(data_structure)'>Heaps</a> (wikipedia)</li>
-</ul>
-
-
-
-
-<h2 class='gulheading'>Hashing</code></h2>
-<h3>Lectures:</h3>
-<ul>
-    <li>See BlackBoard for the lecture and handout on hashing.</li>
-</ul>
-<h3>Web Links:</h3>
-<ul>
-	<li><a href='https://en.wikipedia.org/wiki/Hash_function'>Hashing</a> (wikipedia)</li>
-</ul>
-
-
-
-
-<h2 class='gulheading'>B-Trees</code></h2>
-<h3>Lectures:</h3>
-<ul>
-    <li><a href='https://youtu.be/c3vclH1VQAs'>B-Trees</a></li>
-</ul>
-
-<h3>Handouts:</h3>
-<ul>
-	<li><a href="/~winans/notes/btree.pdf">B-Tree notes from lecture</a></li>
-</ul>
-
-<h3>Web Links:</h3>
-<ul>
-	<li><a href='https://en.wikipedia.org/wiki/B-tree'>B-Trees</a> (wikipedia)</li>
-</ul>
-
-
-
-
-
-<h2 class='gulheading'>Graphs</code></h2>
-<h3>Lectures:</h3>
-<ul>
-    <li> See BlackBoard for the lectures on Graphs</li>
-</ul>
-
-<h3>Web Links:</h3>
-<ul>
-	<li><a href='https://en.wikipedia.org/wiki/Graph_(abstract_data_type)'>Graphs</a> (wikipedia)</li>
-	<li> 
-		This visualization application illustrates graphs and 
-		traversal algorithms:
-		<a href='https://www.cs.usfca.edu/~galles/visualization/Algorithms.html'>Graph Visualizer</a>
-	</li>
-</ul>
-
-
-
-
-
-
-
-<!-- ***************************************************************************************** -->
-
-
-
-<div class='lastmod' style='clear:both; float:right;'>
-<p>
-    Last modified:
-2024-03-23T11:28:07+00:00</div>
-
-<div id='footer' style='clear:both; width:100%'>
-	<hr/>
-	<div id='copyright' style='float:left;'>
-		<p align="left">Copyright &#169; 2024			John Winans
-			All rights reserved. 
         </p>
-	</div>
-</div>
+
+        <div class="vskip">
+        <p>
+            <strong> 
+                ECE 370 Electromagnetic Fields and Waves
+            </strong>
+        </div>
+        </p>
+    </div>  
+    
+    <p>
+
+        <strong>
+            Course Description <br>
+        </strong>
+
+        Theory of electromagnetic fields and waves. Electrostatic, magnetostatic, and electromagnetic fields.
+        Solutions to Maxwell's equations for electromagnetic wave propagation. 
+        Analysis and design of transmission-line systems. Offered for three units of credit.
+    </p>
+
 </body>
+
 </html>
